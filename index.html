@@ -69,10 +69,6 @@
         margin-top: 70px; /* Adjust based on nav height */
       }
 
-      nav img {
-        height: 50px;
-      }
-
       nav ul {
         list-style: none;
         display: flex;
@@ -510,68 +506,6 @@
         box-shadow: 0 6px 20px rgba(107, 115, 255, 0.4);
       }
 
-      /* Services and Reviews Containers */
-      .services, .reviews-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 25px;
-        margin: 40px 0;
-      }
-
-      #services {
-        background: linear-gradient(135deg, #f5f7ff 0%, #e8f2ff 100%);
-      }
-
-      #specials {
-        background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
-      }
-
-      #specials .services {
-        background: transparent;
-      }
-
-      /* Service Box and Review Card */
-      .service-box, .review-card {
-        background: white;
-        margin: 10px;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        width: 320px;
-        transition: all 0.3s ease;
-        border: 1px solid rgba(107, 115, 255, 0.1);
-      }
-
-      .service-box:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        border-color: rgba(107, 115, 255, 0.3);
-      }
-
-      .service-box h3, .review-card h3 {
-        color: #6B73FF;
-        font-size: 1.6rem;
-        margin-bottom: 15px;
-        font-weight: 500;
-      }
-
-      .service-box p, .review-card p {
-        color: #666;
-        line-height: 1.7;
-      }
-
-      /* Price Wrapper (kept in CSS for compatibility, but no price blocks exist in HTML) */
-      .service-box .price-wrapper {
-        display: none;
-      }
-
-      .price-wrapper h4 {
-        margin: 5px 0;
-        color: #333;
-        font-size: 1.1rem;
-      }
-
       /* Contact Section */
       #contact {
         background: linear-gradient(135deg, #e8f5e9 0%, #d4eddb 100%);
@@ -673,11 +607,6 @@
           flex-direction: column;
         }
 
-        .service-box, .review-card {
-          width: 100%;
-          max-width: 400px;
-        }
-
         .gallery-grid {
           grid-template-columns: 1fr;
           gap: 20px;
@@ -732,9 +661,7 @@
     <!-- Navbar -->
     <nav>
       <ul>
-        <li><a href="#services">Services</a></li>
         <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#specials">Specials</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -856,71 +783,58 @@
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-      <h2>Our Massage Services</h2>
-      <h4>Hover or tap to learn more</h4>
-      <div class="services">
-        <div class="service-box">
-          <h3>Full Body Massage</h3>
-          <p>
-            Choose between Swedish relaxation or Deep Tissue therapy massage to target your specific needs and preferences.
-          </p>
-        </div>
-
-        <div class="service-box">
-          <h3>Combo Special (Body + Foot)</h3>
-          <p>
-            Get the best of both worlds with our combination massage that includes both body and foot massage for complete relaxation.
-          </p>
-        </div>
-
-        <div class="service-box">
-          <h3>Foot Massage</h3>
-          <p>
-            Our signature foot massage with cloth on, or comprehensive treatment including Head, Arm, Foot and Back massage.
-          </p>
-        </div>
-
-        <div class="service-box">
-          <h3>Chair Massage</h3>
-          <p>
-            Quick and convenient chair massage perfect for targeting neck, shoulders, and back tension during your busy day.
-          </p>
-        </div>
-      </div>
-    </section>
-
     <!-- Gallery Section -->
     <section id="gallery">
       <div class="gallery-container">
         <h2>Gallery</h2>
         <h4>A peek into our serene spaces and experiences</h4>
         <div class="gallery-grid">
-          <div class="gallery-item" onclick="openModal('img1.jpg')">
-            <img src="img1.jpg" alt="Relaxing massage room" />
+          <div class="gallery-item" onclick="openModal('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY2ZEWG87Ya9_LXF3ZRMfL_HsqhPotdF_Kch3O3IGmW8-TxD7ONOPlA4lG5nSaa2htylA&usqp=CAU')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY2ZEWG87Ya9_LXF3ZRMfL_HsqhPotdF_Kch3O3IGmW8-TxD7ONOPlA4lG5nSaa2htylA&usqp=CAU" alt="Foot Reflexology" />
             <div class="gallery-overlay">
               <div class="gallery-overlay-text">
-                <h3>Massage Room</h3>
-                <p>Calm, cozy, and clean.</p>
+                <h3>Foot Reflexology</h3>
+                <p>Restore balance and vitality.</p>
               </div>
             </div>
           </div>
-          <div class="gallery-item" onclick="openModal('img2.jpg')">
-            <img src="img2.jpg" alt="Foot massage area" />
+
+          <div class="gallery-item" onclick="openModal('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlW7Fwb4p-OtfP5TuvI9eJJNMeTEemqWC9rQ&s')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlW7Fwb4p-OtfP5TuvI9eJJNMeTEemqWC9rQ&s" alt="Special" />
             <div class="gallery-overlay">
               <div class="gallery-overlay-text">
-                <h3>Foot Lounge</h3>
-                <p>Unwind your steps.</p>
+                <h3>Special</h3>
+                <p>Seasonal offers to pamper you.</p>
               </div>
             </div>
           </div>
-          <div class="gallery-item" onclick="openModal('img3.jpg')">
-            <img src="img3.jpg" alt="Treatment essentials" />
+
+          <div class="gallery-item" onclick="openModal('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMr5iNkyH1xEe-nfuq5VqpZIGPuCRHPUir1w&s')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMr5iNkyH1xEe-nfuq5VqpZIGPuCRHPUir1w&s" alt="Body Work" />
             <div class="gallery-overlay">
               <div class="gallery-overlay-text">
-                <h3>Essentials</h3>
-                <p>Quality oils & stones.</p>
+                <h3>Body Work</h3>
+                <p>Deep relaxation from head to toe.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" onclick="openModal('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPUZwDWMAE359wE1vnRo30MJPDJPr9O1sFU-4Yrj53nmwc37-jJ-Ul37T2rC2WbPyLlk&usqp=CAU')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsPUZwDWMAE359wE1vnRo30MJPDJPr9O1sFU-4Yrj53nmwc37-jJ-Ul37T2rC2WbPyLlk&usqp=CAU" alt="Facial" />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-text">
+                <h3>Facial</h3>
+                <p>Refresh and nourish your skin.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" onclick="openModal('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqZUikxl3YLt71d5hYWr16Q9xyZImRfV9Pfg&s')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqZUikxl3YLt71d5hYWr16Q9xyZImRfV9Pfg&s" alt="Combo" />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-text">
+                <h3>Combo</h3>
+                <p>Best of both worlds.</p>
               </div>
             </div>
           </div>
@@ -932,26 +846,6 @@
         <div class="modal-content">
           <button class="close-modal" onclick="closeModal(event)">&times;</button>
           <img id="modalImg" src="" alt="Gallery image" />
-        </div>
-      </div>
-    </section>
-
-    <!-- Specials Section -->
-    <section id="specials">
-      <h2>Specials</h2>
-      <h4>Seasonal offers and relaxing bundles</h4>
-      <div class="services">
-        <div class="service-box">
-          <h3>Weekday Escape</h3>
-          <p>
-            Treat yourself Monday–Thursday with a soothing combo massage at a friendly rate.
-          </p>
-        </div>
-        <div class="service-box">
-          <h3>Hot Stone Add-on</h3>
-          <p>
-            Add hot stones to any full body massage for deeper relaxation.
-          </p>
         </div>
       </div>
     </section>
@@ -1025,18 +919,6 @@
         alert('Thanks! Your appointment request has been received. We will contact you within 30 minutes.');
         hideBookingForm();
       }
-
-      // Pricing reveal on hover/tap (no price blocks present; safe no-op)
-      document.querySelectorAll('.service-box').forEach(box => {
-        const price = box.querySelector('.price-wrapper');
-        if (!price) return;
-        box.addEventListener('mouseenter', () => price.style.display = 'block');
-        box.addEventListener('mouseleave', () => price.style.display = 'none');
-        box.addEventListener('click', () => {
-          // Mobile toggle
-          price.style.display = price.style.display === 'block' ? 'none' : 'block';
-        });
-      });
 
       // Gallery modal
       function openModal(src) {
