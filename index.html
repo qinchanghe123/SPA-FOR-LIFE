@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>King Foot Massage</title>
+    <title>SPA FOR LIFE</title>
     <meta
       name="description"
-      content="Experience ultimate relaxation at King Foot Massage, known for exceptional massages tailored to your needs. Clients love our serene environment, skilled therapists, and personalized care. Unwind and recharge with us."
+      content="SPA FOR LIFE — two NYC locations (Chinatown & Flushing). Relax with professional body and foot massage. Open daily 10am–7pm."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -97,9 +97,9 @@
 
       /* Home Section */
       .home {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        background-size: cover;
-        background-position: center;
+        /* Ensure the background IMAGE is visible and never obscured */
+        /* Replace 'home-bg.jpg' with your actual background image path */
+        background: url('home-bg.jpg') center / cover no-repeat fixed;
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -112,6 +112,7 @@
         overflow: hidden;
       }
 
+      /* Keep the decorative wave super subtle so it doesn't cover the photo */
       .home::before {
         content: '';
         position: absolute;
@@ -119,9 +120,10 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><path d="M0,20 Q250,80 500,20 T1000,20 V100 H0 Z"/></svg>') repeat-x;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.05"><path d="M0,20 Q250,80 500,20 T1000,20 V100 H0 Z"/></svg>') repeat-x;
         background-size: 1000px 100px;
         animation: wave 10s linear infinite;
+        pointer-events: none;
       }
 
       @keyframes wave {
@@ -130,8 +132,8 @@
       }
 
       .home-content {
-        background-color: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.15); /* very light so image remains visible */
+        backdrop-filter: blur(2px);
         padding: 40px;
         border-radius: 20px;
         max-width: 800px;
@@ -143,7 +145,7 @@
       .home h1 {
         font-size: 3.5rem;
         margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.35);
         color: #FFD700;
         font-weight: 300;
         letter-spacing: 2px;
@@ -152,8 +154,9 @@
       .spa-tagline {
         font-size: 1.3rem;
         margin-bottom: 20px;
-        opacity: 0.9;
+        opacity: 0.95;
         font-style: italic;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.35);
       }
 
       /* Gallery Section */
@@ -358,7 +361,7 @@
         color: #764ba2;
         text-decoration: none;
         display: block;
-        margin: 15px 0;
+        margin: 10px 0;
         transition: color 0.3s ease;
       }
 
@@ -585,6 +588,7 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        gap: 30px;
         max-width: 1200px;
         margin: 0 auto;
       }
@@ -598,18 +602,24 @@
         border-radius: 20px;
         box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         border: 1px solid rgba(107, 115, 255, 0.1);
+        max-width: 520px;
+        width: 100%;
       }
 
       .appointment-info {
-        margin-top: 30px;
+        margin-top: 20px;
         text-align: left;
         width: 100%;
       }
 
       .appointment-info p {
-        margin: 15px 0;
-        font-size: 1.2rem;
+        margin: 10px 0;
+        font-size: 1.1rem;
         color: #555;
+      }
+
+      .appointment-info strong {
+        color: #333;
       }
 
       .appointment-info a {
@@ -625,10 +635,10 @@
       }
 
       .appointment-map h3 {
-        margin-top: 25px;
+        margin-bottom: 10px;
         color: #6B73FF;
         font-size: 1.4rem;
-        font-weight: 500;
+        font-weight: 600;
       }
 
       /* Footer */
@@ -646,11 +656,11 @@
           flex-direction: column;
           padding: 15px;
         }
-        
+
         nav ul {
           margin-top: 15px;
         }
-        
+
         .home h1 {
           font-size: 2.5rem;
         }
@@ -669,7 +679,7 @@
         .form-row {
           flex-direction: column;
         }
-        
+
         .service-box, .review-card {
           width: 100%;
           max-width: 400px;
@@ -694,19 +704,19 @@
         section {
           padding: 40px 15px;
         }
-        
+
         section h2 {
           font-size: 2rem;
         }
-        
+
         .home-content {
           padding: 25px;
         }
-        
+
         .home h1 {
           font-size: 2rem;
         }
-        
+
         .book-button, .call-button {
           padding: 12px 25px;
           font-size: 1rem;
@@ -739,8 +749,9 @@
     <!-- Home Section -->
     <section id="home" class="home">
       <div class="home-content">
-        <h1>King Foot Massage</h1>
+        <h1>SPA FOR LIFE</h1>
         <p class="spa-tagline">Your sanctuary of tranquility and rejuvenation</p>
+        <p style="margin: 0.25rem 0 0; font-weight: 600;">Open daily 10:00am – 7:00pm</p>
       </div>
 
       <!-- Call and Book Online Cards -->
@@ -748,8 +759,10 @@
         <!-- Call Card -->
         <div class="contact-card">
           <h3>📞 Call for Appointment</h3>
-          <a href="tel:+1-469-639-0889" class="phone-number">469-639-0889</a>
-          <p>Speak directly with our friendly staff to schedule your perfect massage experience within 30 minutes.</p>
+          <!-- Two locations / two phone numbers -->
+          <a href="tel:+1-212-925-0008" class="phone-number">212-925-0008 (Chinatown)</a>
+          <a href="tel:+1-718-799-0703" class="phone-number">718-799-0703 (Flushing)</a>
+          <p>Speak with our friendly staff to schedule your perfect massage. Daily 10am – 7pm.</p>
         </div>
 
         <!-- Book Online Card -->
@@ -805,7 +818,7 @@
             </div>
             <div class="form-group">
               <label for="time">Preferred Time *</label>
-              <input type="time" id="time" name="time" min="09:00" max="22:00" required>
+              <input type="time" id="time" name="time" min="10:00" max="19:00" required>
             </div>
           </div>
 
@@ -895,3 +908,180 @@
           <p>
             Quick and convenient chair massage perfect for targeting neck, shoulders, and back tension during your busy day.
           </p>
+          <div class="price-wrapper">
+            <h4>15 min: $20</h4>
+            <h4>20 min: $30</h4>
+            <h4>30 min: $40</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+      <div class="gallery-container">
+        <h2>Gallery</h2>
+        <h4>A peek into our serene spaces and experiences</h4>
+        <div class="gallery-grid">
+          <div class="gallery-item" onclick="openModal('img1.jpg')">
+            <img src="img1.jpg" alt="Relaxing massage room" />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-text">
+                <h3>Massage Room</h3>
+                <p>Calm, cozy, and clean.</p>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item" onclick="openModal('img2.jpg')">
+            <img src="img2.jpg" alt="Foot massage area" />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-text">
+                <h3>Foot Lounge</h3>
+                <p>Unwind your steps.</p>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item" onclick="openModal('img3.jpg')">
+            <img src="img3.jpg" alt="Treatment essentials" />
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-text">
+                <h3>Essentials</h3>
+                <p>Quality oils & stones.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div id="imageModal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content">
+          <button class="close-modal" onclick="closeModal(event)">&times;</button>
+          <img id="modalImg" src="" alt="Gallery image" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Specials Section -->
+    <section id="specials">
+      <h2>Specials</h2>
+      <h4>Seasonal offers and relaxing bundles</h4>
+      <div class="services">
+        <div class="service-box">
+          <h3>Weekday Escape</h3>
+          <p>
+            Treat yourself Monday–Thursday with a soothing combo massage at a friendly rate.
+          </p>
+          <div class="price-wrapper">
+            <h4>60 min Combo: $70 Cash / $75 Card</h4>
+          </div>
+        </div>
+        <div class="service-box">
+          <h3>Hot Stone Add-on</h3>
+          <p>
+            Add hot stones to any full body massage for deeper relaxation.
+          </p>
+          <div class="price-wrapper">
+            <h4>Add-on: +$10</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Locations Section -->
+    <section id="contact">
+      <h2>Contact & Locations</h2>
+      <h4>Open daily 10:00am – 7:00pm</h4>
+      <div class="appointment-card">
+        <!-- CHINATOWN -->
+        <div class="appointment-map">
+          <h3>CHINATOWN</h3>
+          <div style="width:100%; height:300px; border-radius:14px; overflow:hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.08);">
+            <iframe
+              title="SPA FOR LIFE - Chinatown"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=31%20Division%20Street%2C%20New%20York%2C%20NY%2010002&output=embed">
+            </iframe>
+          </div>
+          <div class="appointment-info">
+            <p><strong>Address:</strong> 31 Division Street, New York, NY 10002</p>
+            <p><strong>Phone:</strong> <a href="tel:+1-212-925-0008">212-925-0008</a></p>
+            <p><strong>Hours:</strong> Daily 10am – 7pm</p>
+          </div>
+        </div>
+
+        <!-- FLUSHING -->
+        <div class="appointment-map">
+          <h3>FLUSHING</h3>
+          <div style="width:100%; height:300px; border-radius:14px; overflow:hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.08);">
+            <iframe
+              title="SPA FOR LIFE - Flushing"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=135-19%20Roosevelt%20Ave%202R%2C%20Flushing%2C%20NY%2011354&output=embed">
+            </iframe>
+          </div>
+          <div class="appointment-info">
+            <p><strong>Address:</strong> 135-19 Roosevelt Ave 2R, Flushing, NY 11354</p>
+            <p><strong>Phone:</strong> <a href="tel:+1-718-799-0703">718-799-0703</a></p>
+            <p><strong>Hours:</strong> Daily 10am – 7pm</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; <span id="year"></span> SPA FOR LIFE. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Booking form controls
+      function showBookingForm() {
+        document.getElementById('bookingForm').classList.add('active');
+        document.getElementById('bookingForm').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      function hideBookingForm() {
+        document.getElementById('bookingForm').classList.remove('active');
+      }
+      function submitBooking(e) {
+        e.preventDefault();
+        alert('Thanks! Your appointment request has been received. We will contact you within 30 minutes.');
+        hideBookingForm();
+      }
+
+      // Pricing reveal on hover/tap
+      document.querySelectorAll('.service-box').forEach(box => {
+        const price = box.querySelector('.price-wrapper');
+        if (!price) return;
+        box.addEventListener('mouseenter', () => price.style.display = 'block');
+        box.addEventListener('mouseleave', () => price.style.display = 'none');
+        box.addEventListener('click', () => {
+          // Mobile toggle
+          price.style.display = price.style.display === 'block' ? 'none' : 'block';
+        });
+      });
+
+      // Gallery modal
+      function openModal(src) {
+        document.getElementById('modalImg').src = src;
+        document.getElementById('imageModal').classList.add('active');
+      }
+      function closeModal(event) {
+        if (event) event.stopPropagation();
+        document.getElementById('imageModal').classList.remove('active');
+      }
+
+      // Footer year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
