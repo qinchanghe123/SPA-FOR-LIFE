@@ -97,9 +97,8 @@
 
       /* Home Section */
       .home {
-        /* Ensure the background IMAGE is visible and never obscured */
-        /* Replace 'home-bg.jpg' with your actual background image path */
-        background: url('home-bg.jpg') center / cover no-repeat fixed;
+        /* Use local background image and keep it fully visible */
+        background: url('2.avif') center / cover no-repeat fixed;
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -562,15 +561,9 @@
         line-height: 1.7;
       }
 
-      /* Price Wrapper */
+      /* Price Wrapper (kept in CSS for compatibility, but no price blocks exist in HTML) */
       .service-box .price-wrapper {
-        margin-top: 20px;
-        background: linear-gradient(135deg, #f8f9ff 0%, #eef1ff 100%);
-        padding: 15px;
-        border-radius: 10px;
         display: none;
-        min-height: 100px;
-        border-left: 4px solid #6B73FF;
       }
 
       .price-wrapper h4 {
@@ -826,26 +819,26 @@
             <label for="service">Preferred Service</label>
             <select id="service" name="service">
               <option value="">Select a Service</option>
-              <option value="Full Body Massage (Swedish/Deep Tissue) - 30min">Full Body Massage (30min) - $50 Cash/$55 Card</option>
-              <option value="Full Body Massage (Swedish/Deep Tissue) - 60min">Full Body Massage (60min) - $70 Cash/$75 Card</option>
-              <option value="Full Body Massage (Swedish/Deep Tissue) - 90min">Full Body Massage (90min) - $100 Cash/$105 Card</option>
-              <option value="Combo Special (Body+Foot) - 60min">Combo Special (Body+Foot) 60min - $70 Cash/$75 Card</option>
-              <option value="Combo Special (Body+Foot) - 90min">Combo Special (Body+Foot) 90min - $100 Cash/$105 Card</option>
-              <option value="Foot Massage (cloth on) - 30min">Foot Massage (30min) - $35 Cash/$40 Card</option>
-              <option value="Foot Massage (Head+Arm+Foot+Back) - 60min">Foot Massage (Head+Arm+Foot+Back) 60min - $60 Cash/$65 Card</option>
-              <option value="Foot Massage (Head+Arm+Foot+Back) - 90min">Foot Massage (Head+Arm+Foot+Back) 90min - $90 Cash/$95 Card</option>
-              <option value="Chair Massage - 15min">Chair Massage (15min) - $20</option>
-              <option value="Chair Massage - 20min">Chair Massage (20min) - $30</option>
-              <option value="Chair Massage - 30min">Chair Massage (30min) - $40</option>
+              <option value="Full Body Massage (30min)">Full Body Massage (30min)</option>
+              <option value="Full Body Massage (60min)">Full Body Massage (60min)</option>
+              <option value="Full Body Massage (90min)">Full Body Massage (90min)</option>
+              <option value="Combo Special (Body+Foot) 60min">Combo Special (Body+Foot) 60min</option>
+              <option value="Combo Special (Body+Foot) 90min">Combo Special (Body+Foot) 90min</option>
+              <option value="Foot Massage (30min)">Foot Massage (30min)</option>
+              <option value="Foot Massage (60min Head+Arm+Foot+Back)">Foot Massage (Head+Arm+Foot+Back) 60min</option>
+              <option value="Foot Massage (90min Head+Arm+Foot+Back)">Foot Massage (Head+Arm+Foot+Back) 90min</option>
+              <option value="Chair Massage (15min)">Chair Massage (15min)</option>
+              <option value="Chair Massage (20min)">Chair Massage (20min)</option>
+              <option value="Chair Massage (30min)">Chair Massage (30min)</option>
             </select>
           </div>
 
           <div class="form-group">
             <label for="addons">Add-ons (Optional)</label>
             <select id="addons" name="addons" multiple>
-              <option value="Hot Stone (+$10)">Hot Stone (+$10)</option>
-              <option value="Essential Oil (+$10)">Essential Oil (+$10)</option>
-              <option value="CBD Oil/Cream (+$10)">CBD Oil/Cream (+$10)</option>
+              <option value="Hot Stone">Hot Stone</option>
+              <option value="Essential Oil">Essential Oil</option>
+              <option value="CBD Oil/Cream">CBD Oil/Cream</option>
             </select>
             <small style="color: #666;">Hold Ctrl (PC) or Cmd (Mac) to select multiple options</small>
           </div>
@@ -866,18 +859,13 @@
     <!-- Services Section -->
     <section id="services">
       <h2>Our Massage Services</h2>
-      <h4>Hover or tap for detailed pricing information</h4>
+      <h4>Hover or tap to learn more</h4>
       <div class="services">
         <div class="service-box">
           <h3>Full Body Massage</h3>
           <p>
             Choose between Swedish relaxation or Deep Tissue therapy massage to target your specific needs and preferences.
           </p>
-          <div class="price-wrapper">
-            <h4>30 min: $50 Cash / $55 Card</h4>
-            <h4>60 min: $70 Cash / $75 Card</h4>
-            <h4>90 min: $100 Cash / $105 Card</h4>
-          </div>
         </div>
 
         <div class="service-box">
@@ -885,10 +873,6 @@
           <p>
             Get the best of both worlds with our combination massage that includes both body and foot massage for complete relaxation.
           </p>
-          <div class="price-wrapper">
-            <h4>60 min: $70 Cash / $75 Card</h4>
-            <h4>90 min: $100 Cash / $105 Card</h4>
-          </div>
         </div>
 
         <div class="service-box">
@@ -896,11 +880,6 @@
           <p>
             Our signature foot massage with cloth on, or comprehensive treatment including Head, Arm, Foot and Back massage.
           </p>
-          <div class="price-wrapper">
-            <h4>30 min (cloth on): $35 Cash / $40 Card</h4>
-            <h4>60 min (Head+Arm+Foot+Back): $60 Cash / $65 Card</h4>
-            <h4>90 min (Head+Arm+Foot+Back): $90 Cash / $95 Card</h4>
-          </div>
         </div>
 
         <div class="service-box">
@@ -908,11 +887,6 @@
           <p>
             Quick and convenient chair massage perfect for targeting neck, shoulders, and back tension during your busy day.
           </p>
-          <div class="price-wrapper">
-            <h4>15 min: $20</h4>
-            <h4>20 min: $30</h4>
-            <h4>30 min: $40</h4>
-          </div>
         </div>
       </div>
     </section>
@@ -972,18 +946,12 @@
           <p>
             Treat yourself Monday–Thursday with a soothing combo massage at a friendly rate.
           </p>
-          <div class="price-wrapper">
-            <h4>60 min Combo: $70 Cash / $75 Card</h4>
-          </div>
         </div>
         <div class="service-box">
           <h3>Hot Stone Add-on</h3>
           <p>
             Add hot stones to any full body massage for deeper relaxation.
           </p>
-          <div class="price-wrapper">
-            <h4>Add-on: +$10</h4>
-          </div>
         </div>
       </div>
     </section>
@@ -1058,7 +1026,7 @@
         hideBookingForm();
       }
 
-      // Pricing reveal on hover/tap
+      // Pricing reveal on hover/tap (no price blocks present; safe no-op)
       document.querySelectorAll('.service-box').forEach(box => {
         const price = box.querySelector('.price-wrapper');
         if (!price) return;
