@@ -154,6 +154,56 @@
         text-shadow: 1px 1px 3px rgba(0,0,0,0.35);
       }
 
+      /* ---------- Beauty Services (Flexbox) ---------- */
+      #beauty-services {
+        background: linear-gradient(135deg, #f5f7ff 0%, #e8f2ff 100%);
+      }
+
+      .beauty-flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px;
+        justify-content: center;
+        align-items: stretch;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .beauty-card {
+        flex: 1 1 320px;
+        max-width: 520px;
+        background: #fff;
+        border-radius: 16px;
+        padding: 18px 18px 22px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        border: 1px solid rgba(107,115,255,0.12);
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+
+      .beauty-card img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 14px;
+      }
+
+      .beauty-card h3 {
+        margin: 4px 0 8px;
+        color: #6B73FF;
+        font-size: 1.35rem;
+        font-weight: 600;
+      }
+
+      .beauty-card p {
+        margin: 0;
+        color: #555;
+        line-height: 1.6;
+      }
+      /* ---------- End Beauty Services (Flexbox) ---------- */
+
       /* Gallery Section */
       #gallery {
         background: linear-gradient(135deg, #f0f4ff 0%, #e1ecff 100%);
@@ -620,6 +670,12 @@
           max-width: 95%;
           max-height: 85%;
         }
+
+        /* Beauty services: allow full width on mobile */
+        .beauty-card {
+          flex-basis: 100%;
+          max-width: 600px;
+        }
       }
 
       @media (max-width: 480px) {
@@ -783,34 +839,28 @@
       </div>
     </section>
 
-    <!-- Beauty Services (New) -->
+    <!-- Beauty Services (Flexbox layout) -->
     <section id="beauty-services">
       <h2>Beauty Services</h2>
       <h4>Nails & Eyelash Extensions</h4>
-      <div class="services" style="gap: 30px; justify-content: center; flex-wrap: wrap;">
-        <div class="service-box" style="max-width: 420px;">
+      <div class="beauty-flex">
+        <article class="beauty-card">
           <img
             src="https://iam.marieclaire.com.tw/s1200c675h100b0webp100/assets/mc/202509/68D7F227D752D1758982695.jpeg"
             alt="Nails / Manicure"
-            style="width:100%;height:260px;object-fit:cover;border-radius:12px;margin-bottom:14px;"
           />
           <h3>Nails (Manicure)</h3>
-          <p>
-            Clean shaping, cuticle care, and elegant finishes. Treat your hands to a glossy, long-lasting look.
-          </p>
-        </div>
+          <p>Clean shaping, cuticle care, and elegant finishes. Treat your hands to a glossy, long-lasting look.</p>
+        </article>
 
-        <div class="service-box" style="max-width: 420px;">
+        <article class="beauty-card">
           <img
             src="https://www.msemma.com.tw/webfile/webdate/4845ed651e6b73a79eff6ff045a54c68/bbd45059acf82f0ee9b2b1b73e4e13845.jpg"
             alt="Eyelash Extensions"
-            style="width:100%;height:260px;object-fit:cover;border-radius:12px;margin-bottom:14px;"
           />
           <h3>Eyelash Extensions</h3>
-          <p>
-            Natural to glamorous lash sets customized to your eye shape for effortless, everyday elegance.
-          </p>
-        </div>
+          <p>Natural to glamorous lash sets customized to your eye shape for effortless, everyday elegance.</p>
+        </article>
       </div>
     </section>
 
